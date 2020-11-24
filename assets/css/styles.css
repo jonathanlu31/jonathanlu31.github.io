@@ -1,0 +1,372 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    --transition-speed: 250ms ease;
+}
+
+/* Layout */
+
+main {
+    margin-top: 3.5rem;
+    background-color: #2e2e2e;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7rem 0 9rem 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D24D57;
+    padding: 19vh 0;
+    justify-content: center;
+}
+
+footer {
+    padding: 1.8rem 0;
+}
+
+/* Navigation */
+#navbar {
+    height: 3.7rem;
+    width: 100vw;
+    background: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#navbar::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #02c2c9;
+    position: absolute;
+}
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 90rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#navbar ul {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navbar li {
+    margin: 0 1rem;
+}
+
+.link-text {
+    text-decoration: none;
+}
+
+/* Welcome section */
+
+#welcome-section {
+    height: 100vh;
+    background: url(../../images/laptop-back.jpg) center/cover no-repeat;
+    position: relative;
+}
+
+#welcome-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1F2123;
+    opacity: .42;
+}
+
+.btn_link {
+    text-decoration: none;
+    padding: .6rem;
+    border: 1px solid white;
+    display: flex;
+    width: 9.7rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: all var(--transition-speed);
+}
+
+.btn_link:hover {
+    background-color: white;
+    color: black;
+}
+
+svg {
+    transition: all var(--transition-speed);
+}
+
+svg path{
+    transition: inherit;
+}
+
+.btn_link:hover svg path{
+    fill: black;
+}
+
+.btn_link:hover svg {
+    transform: rotate(90deg);
+}
+
+.welcome-text a {
+    position: relative;
+    top: .5rem;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 38%;
+    left: 5%;
+}
+
+.intro {
+    position: relative;
+    top: -.5rem;
+}
+
+/* i {
+    display: inline-block;
+    position: relative;
+    top: 1.5px;
+} */
+
+/* Projects */
+.projects h2 {
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects h2::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 75%;
+    bottom: -.3rem;
+    border-top: solid 1px white;
+}
+
+.tiles {
+    display: flex;
+    margin-top: 2.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    align-content: space-between;
+}
+
+.project-tile {
+    min-width: 350px;
+    width: 24%;
+    height: auto;
+    position: relative;
+    margin: 0 0.6rem;
+    background-color:#000;
+}
+
+.hover-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: visibility var(--transition-speed);
+}
+
+.btn {
+    text-decoration: none;
+    padding: .6rem 2.2rem;
+    border: 2px solid white;
+    width: 9.31rem;
+    border-radius: 50px;
+    margin-top: 4rem;
+    pointer-events: none;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.project-tile:hover .hover-info {
+    visibility: visible;
+}
+
+.project-tile:hover .btn {
+    pointer-events: auto;
+}
+
+.project-tile:hover .proj-img {
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.proj-img {
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--transition-speed);
+}
+
+.btn_blue {
+    margin-top: 3.5rem;
+    background-color: #4A6CC1;
+    border-radius: 7px;
+    padding: .9rem 3.2rem;
+    border: none;
+    letter-spacing: .02rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+/* Contact */
+.contact_btn {
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 1.7rem;
+    width: 14rem;
+    padding: 1.1rem 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3.2rem;
+    border: 2px solid white;
+    transition: all var(--transition-speed);
+    cursor: pointer;
+}
+
+.contact_btn:hover {
+    color: #D24D57;
+    background-color: white;
+}
+
+.contact h2 {
+    margin-bottom: .2rem;
+}
+
+.icons {
+    display: flex;
+    width: 20rem;
+    justify-content: space-around;
+    font-size: 2.2rem;
+    margin-top: 3.6rem;
+}
+
+.icon {
+    transform: translateY(0);
+    transition: transform ease 170ms;
+}
+
+.icon:hover {
+    transform: translateY(.5rem);
+}
+
+@media only screen and (min-width: 1600px) {
+    .welcome-text {
+        left: calc((100vw - 90rem)/2);
+    }
+}
+
+@media only screen and (max-width: 1215px) {
+    .tiles {
+        height: 32rem;
+    }
+    .welcome-text {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    :root {
+        font-size: 12px;
+    }
+    .project-tile {
+        margin-top: 1rem;
+        width: 100%;
+    } 
+    .tiles {
+        height: auto;
+    }
+    .btn_link {
+        width: 10rem;
+        margin-top: .3rem;
+    }
+    h1 {
+        line-height: 3.3rem;
+        margin-bottom: .6rem;
+    }
+    .btn {
+        width: 9.4rem;
+    }
+    .projects .body-text {
+        padding-left: 5%;
+    }
+}
+
+/* ========== */
+/* Typography */
+/* ========== */
+
+h1 {
+    font-weight: 500;
+    font-size: 3.25rem;
+}
+
+.body-text {
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+.contact-text {
+    font-size: 1.35rem;
+    color: #d3d3d3;
+}
+
+h4 {
+    font-weight: 400;
+    text-align: center;
+    color: #ccc;
+}
