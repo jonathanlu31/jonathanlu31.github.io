@@ -1,0 +1,47 @@
+/* Custom font size adjustments */
+body {
+  font-size: 0.9rem;  /* Makes all text slightly smaller */
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p, li {
+  font-size: 0.9rem;
+}
+
+/* Adjust navigation and footer text */
+.nav__list-item {
+  font-size: 0.9rem;
+}
+
+.footer {
+  font-size: 0.85rem;
+}
+
+/* Adjust sidebar text */
+.sidebar {
+  font-size: 0.9rem;
+}
+
+/* Adjust archive items */
+.archive__item-title {
+  font-size: 1.1rem;
+}
+
+.archive__item-excerpt {
+  font-size: 0.85rem;
+} 
